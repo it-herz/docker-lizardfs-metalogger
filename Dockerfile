@@ -8,8 +8,7 @@ RUN apt-get -y update && apt-get -y install wget && \
     apt-get -y update && apt-get -y install lizardfs-metalogger && \
     mkdir /root/mfs && cp /var/lib/mfs/metadata.mfs.empty /root/mfs && \
     cp /etc/mfs/mfsexports.cfg.dist /root/mfs && \
-    cp /var/lib/mfs/metadata.mfs.empty /var/lib/mfs/metadata.mfs && \
-    cp /etc/mfs/mfsmaster.cfg.dist /etc/mfs/mfsmaster.cfg && \
+    cp /etc/mfs/mfsmetalogger.cfg.dist /etc/mfs/mfsmetalogger.cfg && \
     sed -i 's/LIZARDFSMETALOGGER_ENABLE=false/LIZARDFSMETALOGGER_ENABLE=true/g'  /etc/default/lizardfs-metalogger
 
 EXPOSE 9419 9420 9421 9425
